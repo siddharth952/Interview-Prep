@@ -20,7 +20,6 @@ void selection_sort(int a[], int n) {
 
 int main() {
 
-
 	int n, key;
 	cin >> n;
 	cout << "Test";
@@ -30,8 +29,9 @@ int main() {
 		cin >> a[i];
 	}
 	selection_sort(a, n);
-	for (int i = 0; i < n; i++) {
-		cout << a[i] << ",";
+	
+	for(int t:a){
+		cout<<t<<" ";
 	}
 
 
