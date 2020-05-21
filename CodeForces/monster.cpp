@@ -1,10 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
+ios_base::sync_with_stdio(0);
+cin.tie(NULL);
+
 int N,K;
+cin>>N>>K;
+
   vector<int> hr(N);
-  cin>>N>>K;
-  if(K>N){ cout<<0; return 0;}
+  long long ans=0;
+  if(K>N){ cout<<ans; return 0;}
+  
   
   for(int i=0;i<N;i++){
     int input;
@@ -13,9 +19,12 @@ int N,K;
   }
   
   sort(hr.begin(),hr.end());
-  while(K--){
-  	hr.erase (hr.begin());
-  
+  // 0 1 2 3 4
+  for (int i = 0; i < N-K; i++)
+  {
+      ans += hr[i];
   }
-  cout<<accumulate(hr.begin(), hr.end(), 0);
+  
+  cout<<ans;
+  return 0;
 }
