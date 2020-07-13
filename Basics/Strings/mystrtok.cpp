@@ -3,7 +3,7 @@ using namespace std;
 
 char *mystrtok(char *str,char delim){
     // State of static var is initilized only once in fucn call and subsi calls same state
-    static char* input = NULL;
+    static char* input = NULL; // Maintain state of array inside func.
     if(str!=NULL){
         // First call
         input = str;
@@ -13,7 +13,7 @@ char *mystrtok(char *str,char delim){
     if(input == NULL) return NULL; // After final token has been returned!
 
     // Start extracting tokens and store em in an array
-    char *output = new char[strlen(input) + 1]; // 1 for null char 
+    char *output = new char[strlen(input) + 1]; // 1 for null char  // Dynamic array created everytime we want to return a token
     int i =0;
     for(;input[i]!='\0';i++){
         if(input[i] != delim){
@@ -40,7 +40,7 @@ int main(){
 
     char *ptr = mystrtok(s,' ');
     cout<< ptr<<endl;
-    
+
     while(ptr!=NULL){
         ptr = mystrtok(NULL,' ');
         cout<<ptr<<endl;
