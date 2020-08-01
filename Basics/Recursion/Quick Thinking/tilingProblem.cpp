@@ -22,6 +22,14 @@ int tileWays(int n){
     return total;
 }
 
+// Optimize with DP
+
+
+
+
+
+
+
 int main(){
    cout<< tileWays(10);
  return 0;
