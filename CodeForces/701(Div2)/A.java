@@ -8,8 +8,12 @@ public class A {
 
     /*
 
+        At most 30 steps so runtime is fast
+        BruteF how many times to increment b and we increment it
+        Then we divide a by b till its 0
+
     */
-    public void print(Object x){
+    public static void print(Object x){
         System.out.println(x);
     }
 
@@ -25,6 +29,9 @@ public class A {
             } print(best);
         }
     }
+
+
+
 
     static int count(int a, int b){
         if (b==1) return 1_000_000_000;
