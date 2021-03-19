@@ -14,5 +14,6 @@
         "utility": "cpp",
         "valarray": "cpp",
         "vector": "cpp"
-    }
+    },
+    "python.pythonPath": "/usr/bin/python3"
 }
