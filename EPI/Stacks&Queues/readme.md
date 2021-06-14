@@ -1,0 +1,1 @@
+Stacks support LIFO semantics for insert/del, Queues FIFO
